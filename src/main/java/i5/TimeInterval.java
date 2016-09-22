@@ -11,8 +11,8 @@ import java.time.LocalTime;
 
 
 class TimeInterval {
-    LocalTime start;
-    LocalTime end;
+    private LocalTime start;
+    private LocalTime end;
 
     private TimeInterval() {
     }
@@ -26,11 +26,8 @@ class TimeInterval {
     }
 
     public boolean overlap(TimeInterval ti) {
-
-        min(this.start,ti.start);
+        if (start.compareTo(ti.start) >= 0 && start.compareTo(ti.end) < 0) return true;
+        if (ti.start.compareTo(start) >= 0 && ti.start.compareTo(end) < 0) return true;
         return false;
-    }
-    private LocalTime min(LocalTime time,LocalTime time2){
-        return time;
     }
 }
