@@ -6,7 +6,7 @@ import java.time.temporal.ChronoUnit;
 import static java.time.temporal.ChronoUnit.DAYS;
 
 /**
- * Created by tischenko on 20.09.2016.
+ 5. Write a program that prints how many days you have been alive.
  */
 public class ex5 {
     public static void main(String[] args) {

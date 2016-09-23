@@ -1,15 +1,18 @@
 package i5;
 
-import java.time.*;
+import java.time.Instant;
+import java.time.ZoneId;
+import java.time.ZoneOffset;
+import java.time.ZonedDateTime;
 
 /**
- * 8. Obtain the offsets of today’s date in all supported time zones for the current
- * time instant, turning ZoneId.getAvailableIds into a stream and using stream
- * operations.
+ 9. Again using stream operations, find all time zones whose offsets aren’t full
+ hours.
  */
-public class ex8 {
+public class ex9 {
+    // TODO: 23.09.2016
     public static void main(String[] args) {
-        Instant now = Instant.now();
+        /*Instant now = Instant.now();
         ZonedDateTime utc = now.atZone(ZoneOffset.UTC);
         System.out.println(utc);
         ZoneId.getAvailableZoneIds().stream().sorted().forEach((x) -> {
@@ -17,6 +20,6 @@ public class ex8 {
             //ZoneId.of(x).
         });
         // TODO: 22.09.2016  Obtain the offsets
-        //  ZoneOffset.UTC;
+        //  ZoneOffset.UTC;*/
     }
 }

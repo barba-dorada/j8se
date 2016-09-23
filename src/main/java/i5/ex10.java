@@ -1,7 +1,9 @@
 package i5;
 
-import java.time.*;
-import java.time.temporal.Temporal;
+import java.time.Duration;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 
 /**
  * 10. Your flight from Los Angeles to Frankfurt leaves at 3:05 pm local time and
