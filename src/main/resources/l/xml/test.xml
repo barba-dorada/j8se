@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<training>
+    <brochure>
+        <course price="123.45" id="c1">
+            <name>Course 1</name>
+        </course>
+        <course price="123.45" id="c0">
+            <name>Course 0</name>
+        </course>
+    </brochure>
+</training>
