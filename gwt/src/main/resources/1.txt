@@ -1,0 +1,17 @@
+header = '{"alg":"HS256","typ":"JWT"}'
+HS256 indicates that this token is signed using HMAC-SHA256.
+
+The payload contains the claims that we wish to make:
+
+payload = '{"loggedInAs":"admin","iat":1422779638}'
+As suggested in the JWT spec, we include a timestamp called iat, short for "issued at".
+
+The signature is calculated by base64url encoding the header and payload and concatenating them with a period as a separator:
+
+key           = 'secretkey'
+unsignedToken = encodeBase64(header) + '.' + encodeBase64(payload)
+signature     = HMAC-SHA256(key, unsignedToken)
+To put it all together, we base64url encode the signature, and join together the three parts using periods:
+
+token = encodeBase64(header) + '.' + encodeBase64(payload) + '.' + encodeBase64(signature)
+# token is now: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dnZWRJbkFzIjoiYWRtaW4iLCJpYXQiOjE0MjI3Nzk2Mzh9.gzSraSYS8EXBxLN_oWnFSRgCzcmJmMjLiuyu5CSpyHI
