@@ -14,7 +14,9 @@ import javax.xml.datatype.XMLGregorianCalendar;
 public class CBRServise {
     public static void main(String[] args) throws DatatypeConfigurationException {
         DailyInfo di = new DailyInfo();
-        DailyInfoSoap port = di.getDailyInfoSoap12();
+        DailyInfoSoap port = di.getDailyInfoSoap();
+
+     // http://anteastra.blogspot.ru/2012/12/java-web-sercice.html
 
         DatatypeFactory f = DatatypeFactory.newInstance();
         XMLGregorianCalendar dd = f.newXMLGregorianCalendar();
