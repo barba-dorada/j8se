@@ -1,3 +1,5 @@
-C:\dev\java\jdk1.8.0_112\bin\wsimport.exe -extension -keep -XadditionalHeaders -p ru.cwl.ws.gismeteo.registration -s main/java -d dest http://ws.gismeteo.ru/Registration/Register.asmx?WSDL
-C:\dev\java\jdk1.8.0_112\bin\wsimport.exe -extension -keep -XadditionalHeaders -p ru.cwl.ws.gismeteo.locations -s main/java -d dest http://ws.gismeteo.ru/Locations/Locations.asmx?WSDL
-C:\dev\java\jdk1.8.0_112\bin\wsimport.exe -extension -keep -XadditionalHeaders -p ru.cwl.ws.gismeteo.weather -s main/java -d dest http://ws.gismeteo.ru/Weather/Weather.asmx?WSDL
+set wsi="%java_home%\bin\wsimport"
+set param=-extension -keep -XadditionalHeaders -s main/java -d dest
+%wsi% %param% -p ru.cwl.ws.gismeteo.registration http://ws.gismeteo.ru/Registration/Register.asmx?WSDL
+%wsi% %param% -p ru.cwl.ws.gismeteo.locations http://ws.gismeteo.ru/Locations/Locations.asmx?WSDL
+%wsi% %param% -p ru.cwl.ws.gismeteo.weather http://ws.gismeteo.ru/Weather/Weather.asmx?WSDL
